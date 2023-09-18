@@ -99,6 +99,7 @@ class FacialClustering():
 
         if FE in ['kv-resnet50', 'kv-senet50', 'kv-vgg16']:
             # keras_vggface
+            FE = FE.replace('kv-', '')
             model = kv.VGGFace(model=FE, include_top=False,
                                input_shape=(224, 224, 3), pooling='avg')
 
