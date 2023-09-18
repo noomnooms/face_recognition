@@ -1,0 +1,7 @@
+Path list:
+ - .\dataset
+
+No faces detected in these files:
+
+(25/25) images processed.
+==================================================

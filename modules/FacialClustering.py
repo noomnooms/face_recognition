@@ -4,8 +4,8 @@ from datetime import datetime
 from random import shuffle
 import networkx as nx
 import pandas as pd
-from FacePreprocess import FacePreprocess
 import keras_vggface as kv
+from modules.FacePreprocess import FacePreprocess
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 import tensorflow as tf
@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 
 
 class FacialClustering():
-    def __init__(self, pathlist: list, processor: FacePreprocess, out_path: str, preprocess: bool, False):
+    def __init__(self, pathlist: list, processor: FacePreprocess, out_path: str, preprocess: bool = False):
         '''
         Given a list of paths, cluster all images inside the path by identity
 
@@ -133,7 +133,7 @@ class FacialClustering():
 
         return facial_encodings
 
-    def chinese_whispers(self, FE: str = 'kv-resnet50', threshold: float = 0.75, iterations: int = 20):
+    def chinese_whispers(self, FE: str = 'kv-resnet50', threshold: float = 0.75, iterations: int = 20, saveas: bool = True):
         '''
         Clustering with chinese whispers method
         source: https://github.com/zhly0/facenet-face-cluster-chinese-whispers-/blob/master/clustering.py#L12
@@ -143,6 +143,7 @@ class FacialClustering():
             - FE: 'kv-resnet50', 'kv-senet50', 'kv-vgg16', 'arcface', 'deepface', 'facenet'
             - threshold: min distance between clusters
             - iterations: number of iterations
+            - saveas: save a copy of the clustered faces
         '''
         file = open(self.filename, 'a')
         file.write('\n{}\n'.format(
@@ -249,13 +250,14 @@ class FacialClustering():
             df = pd.DataFrame(pathlist, columns=['path'])
             df.to_excel(writer, sheet_name=str(i), index=False)
 
-            cluster_dir = output_path+'\\'+str(i)
-            try:
-                os.makedirs(cluster_dir)
-            except:
-                pass
-            for path in pathlist:
-                shutil.copy(path, cluster_dir+'\\'+os.path.basename(path))
+            if saveas:
+                cluster_dir = output_path+'\\'+str(i)
+                try:
+                    os.makedirs(cluster_dir)
+                except:
+                    pass
+                for path in pathlist:
+                    shutil.copy(path, cluster_dir+'\\'+os.path.basename(path))
 
         writer.close()
 
@@ -264,7 +266,7 @@ class FacialClustering():
 
         file.close()
 
-    def DBSCAN(self, FE: str = 'kv-resnet50', eps: float = 0.5, metric: str = 'euclidean', min_samples: int = 3):
+    def DBSCAN(self, FE: str = 'kv-resnet50', eps: float = 0.5, metric: str = 'euclidean', min_samples: int = 3, saveas: bool = True):
         '''
         Clustering with DBSCAN method
         source: https://github.com/AsutoshPati/Face-Clustering-using-DBSCAN 
@@ -274,6 +276,7 @@ class FacialClustering():
             - FE: 'kv-resnet50', 'kv-senet50', 'kv-vgg16', 'arcface', 'deepface', 'facenet'
             - eps: The maximum distance between two samples for one to be considered as in the neighborhood of the other.
             - metric:  From scikit-learn -> ['cityblock', 'cosine', 'euclidean', 'l1', 'l2', 'manhattan']
+            - saveas: save a copy of the clustered faces
         '''
         file = open(self.filename, 'a')
         file.write('\n{}\n'.format(
@@ -311,13 +314,14 @@ class FacialClustering():
             df = pd.DataFrame(pathlist, columns=['path'])
             df.to_excel(writer, sheet_name=sheet_name, index=False)
 
-            cluster_dir = output_path+'\\'+sheet_name
-            try:
-                os.makedirs(cluster_dir)
-            except:
-                pass
-            for path in pathlist:
-                shutil.copy(path, cluster_dir+'\\'+os.path.basename(path))
+            if saveas:
+                cluster_dir = output_path+'\\'+sheet_name
+                try:
+                    os.makedirs(cluster_dir)
+                except:
+                    pass
+                for path in pathlist:
+                    shutil.copy(path, cluster_dir+'\\'+os.path.basename(path))
 
         writer.close()
 
