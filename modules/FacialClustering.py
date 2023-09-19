@@ -5,10 +5,8 @@ from random import shuffle
 import networkx as nx
 import pandas as pd
 import keras_vggface as kv
-from modules.FacePreprocess import FacePreprocess
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
-import tensorflow as tf
 import os
 import cv2
 import numpy as np
@@ -17,7 +15,7 @@ warnings.filterwarnings('ignore')
 
 
 class FacialClustering():
-    def __init__(self, pathlist: list, processor: FacePreprocess, out_path: str, preprocess: bool = False):
+    def __init__(self, pathlist: list, processor, out_path: str, preprocess: bool = False):
         '''
         Given a list of paths, cluster all images inside the path by identity
 
