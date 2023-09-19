@@ -276,6 +276,7 @@ class FacialClustering():
         Parameters
             - FE: 'kv-resnet50', 'kv-senet50', 'kv-vgg16', 'arcface', 'deepface', 'facenet'
             - eps: The maximum distance between two samples for one to be considered as in the neighborhood of the other.
+            - min_samples: The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
             - metric:  From scikit-learn -> ['cityblock', 'cosine', 'euclidean', 'l1', 'l2', 'manhattan']
             - saveas: save a copy of the clustered faces
         '''
