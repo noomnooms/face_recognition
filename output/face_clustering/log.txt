@@ -5,3 +5,19 @@ No faces detected in these files:
 
 (25/25) images processed.
 ==================================================
+
+2023-09-19 10:29:32
+Chinese whispers
+FE: kv-resnet50	Threshold: 8000	Iterations: 3000
+5 clusters found
+Output path: .\output\face_clustering\CW_kv-resnet50_th8000_it3000
+
+==================================================
+
+2023-09-19 10:29:38
+DBSCAN
+FE: kv-resnet50	eps: 75	metric: euclidean	min_samples: 3
+5 clusters found
+Output path: .\output\face_clustering\DBSCAN_kv-resnet50_eps75_euclidean_min3
+
+==================================================

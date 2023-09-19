@@ -22,7 +22,7 @@ def resize(image, size:tuple):
 def findEuclideanDistance(x, y):
     return np.sqrt(np.sum((x - y) ** 2))
 
-def findCosineDistance(x, y):
+def findCosineSimil(x, y):
     return 1 - np.dot(x, y) / (np.sqrt(np.dot(x, x)) * np.sqrt(np.dot(y, y)))
 
 def L2_normalize(x):
