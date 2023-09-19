@@ -166,3 +166,4 @@ models/
 /debugging.docx
 /人臉辨識 20230530.pptx
 .vscode/
+modules/__pycache__/
