@@ -36,6 +36,8 @@ The task of facial recognition can be simplified into 3 parts
 
    - [Keras VGGFace](https://github.com/rcmalli/keras-vggface): `resnet50`, `senet50`, `vgg16`
    - [ArcFace](https://sefiks.com/2020/12/14/deep-face-recognition-with-arcface-in-keras-and-python/)
+   - [Facebook DeepFace](https://sefiks.com/2020/02/17/face-recognition-with-facebook-deepface-in-keras/)
+   - [Google Facenet](https://sefiks.com/2018/09/03/face-recognition-with-facenet-in-keras/)
 
 3. Compare Embeddings &rarr; after we have embeddings of every image in our dataset, and our target image, we can compare the vector distances between these images, and find the closest distance. The closest distanced image in our dataset, is the identity of our target image.
 
