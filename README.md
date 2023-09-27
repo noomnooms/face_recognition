@@ -73,7 +73,7 @@ For this experiment we use the basic pipeline of
 | `resnet50` | `cosinesimil` | 778                                    | 187                                    | 0.8062                                    | 0.2342                | 0.0662                  |
 | `resnet50` | `l2`          | 757                                    | 208                                    | 0.7844                                    | 6621.3303             | 1470.4977               |
 | `senet50`  | `cosinesimil` | 791                                    | 174                                    | 0.8196                                    | 0.1900                | 0.0470                  |
-| `senet50`  | `l2`          | <code style="color : LightSkyBlue">801</code> | <code style="color : LightSkyBlue">164 | <code style="color : LightSkyBlue">0.8300 | 14349.9026            | 3123.0065               |
+| `senet50`  | `l2`          | <code style="color : LightSkyBlue">801 | <code style="color : LightSkyBlue">164 | <code style="color : LightSkyBlue">0.8300 | 14349.9026            | 3123.0065               |
 | `vgg16`    | `cosinesimil` | 353                                    | 612                                    | 0.3658                                    | 0.0907                | 0.0525                  |
 | `vgg16`    | `l2`          | 337                                    | 628                                    | 0.3492                                    | 2054.4873             | 2205.3795               |
 
