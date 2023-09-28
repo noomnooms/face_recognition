@@ -18,7 +18,7 @@ TBD
 4. Real-time Face Recognition
 5. Improving prediction accuracy
 6. [Unsupervised learning: Face Clustering](6.%20face%20clustering.ipynb)
-7. 3D Pose Generation from single image
+7. [3D Pose Generation from single image](7.%203D%20pose%20generation.ipynb)
 
 TBD
 
