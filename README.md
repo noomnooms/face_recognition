@@ -108,11 +108,13 @@ In this experiment, we use both distance metrics at the same time. When both met
 | `senet50`  | <code style="color : LightSkyBlue">775 | 98                                    | <code style="color : LightSkyBlue">92 | 0.8877                                   | 7134.1112             | 1469.9975               |
 | `vgg16`    | 271                                    | 273                                   | 421                                   | 0.4981                                   | 1295.1459             | 1295.1459               |
 
-With this method, we increased the accuracy by 6.9%, up to 90%.
+With this method, our accuracy reached 90%, improving by 6.9% from the previous experiment.
 
 <u>Onsite results:</u>
 
-Even when the Webcam test shows promising results, when
+Even when the Webcam test shows promising results, when applied Onsite, the model is unable to make consistent predictions (prediction changes every frame with the same person). This is reasonable as the image quality is very low, the lighting is not ideal, which is totally different from the pristine ID pictures in the dataset. On top of that, we have to predict from a pool of 1284 subjects. Despite all this, I still want to improve the Onsite prediction accuracy.
+
+### <b>Experiment 4:</b> Domain Adversarial Network
 
 TBD
 
