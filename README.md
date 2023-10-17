@@ -15,7 +15,7 @@ TBD
 1. [Image preprocessing for Facial Recognition](1.%20image%20preprocessing%20for%20facial%20recognition.ipynb)
 2. [Intro to Facial Recognition](2.%20face%20recognition%20basics.ipynb)
 3. [Large-scale Face Recognition](3.%20large%20scale%20face%20recognition.ipynb)
-4. Real-time Face Recognition
+4. [Real-time Face Recognition](4.%20real%20time%20face%20recognition.ipynb)
 5. Improving prediction accuracy
 6. [Unsupervised learning: Face Clustering](6.%20face%20clustering.ipynb)
 7. [3D Pose Generation from single image](7.%203D%20pose%20generation.ipynb)
@@ -126,7 +126,11 @@ TBD
 
 ## References
 
-TBD
+- [deepface by serengil](https://github.com/serengil/deepface)
+- [Chinese whispers by zhly0](https://github.com/zhly0/facenet-face-cluster-chinese-whispers-/blob/master/clustering.py)
+- [DBSCAN by AsutoshPati](https://github.com/AsutoshPati/Face-Clustering-using-DBSCAN)
+- [NextFace by abdallahdib](https://github.com/abdallahdib/NextFace)
+- [Test video .dataset/test/test_2.mp4](https://youtu.be/Ia3x_X_OX58?si=aA5GdMpRGcCar2xF)
 
 <!--
 | Model      | Distance      | `True` | `False` | Accuracy | `avg` distance | `stdev` distance |
