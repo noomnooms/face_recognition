@@ -62,9 +62,9 @@ For the benchmark, we evaluate on two different scenarios:
 
 ### <b>Experiment 1:</b> Basic Algorithm
 
-For this experiment we use the basic pipeline of
+For this experiment we follow the basic pipeline of modern facial recognition.
 
-<!-- img tbd -->
+![Fig 1: Basic Algorithm](./assets/fig1.svg)
 
 <u>Webcam results:</u>
 
@@ -83,6 +83,8 @@ For this experiment we use the basic pipeline of
 
 Since the webcam and onsite image quality is worse than the dataset, we blur our dataset images so that it closely resembles the target.
 
+![Fig 2: Image Blur](./assets/fig2.svg)
+
 <u>Webcam results:</u>
 
 | Model      | Distance      | `True`                                 | `False`                                | Accuracy                                  | `avg 'True'` distance | `stdev 'True'` distance |
@@ -99,6 +101,8 @@ With this method, we increased the accuracy by 0.1%.
 ### <b>Experiment 3:</b> Double Verification
 
 In this experiment, we use both distance metrics at the same time. When both metrics return the same ID, we will judge for `True` or `False`. Otherwise we label it as `unknown`.
+
+![Fig 3: Double Verification](./assets/fig3.svg)
 
 <u>Webcam results:</u>
 
