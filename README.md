@@ -130,7 +130,6 @@ TBD
 - [Chinese whispers by zhly0](https://github.com/zhly0/facenet-face-cluster-chinese-whispers-/blob/master/clustering.py)
 - [DBSCAN by AsutoshPati](https://github.com/AsutoshPati/Face-Clustering-using-DBSCAN)
 - [NextFace by abdallahdib](https://github.com/abdallahdib/NextFace)
-- [Test video .dataset/test/test_2.mp4](https://youtu.be/Ia3x_X_OX58?si=aA5GdMpRGcCar2xF)
 
 <!--
 | Model      | Distance      | `True` | `False` | Accuracy | `avg` distance | `stdev` distance |
