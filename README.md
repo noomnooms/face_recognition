@@ -16,11 +16,10 @@ TBD
 2. [Intro to Facial Recognition](2.%20face%20recognition%20basics.ipynb)
 3. [Large-scale Face Recognition](3.%20large%20scale%20face%20recognition.ipynb)
 4. [Real-time Face Recognition](4.%20real%20time%20face%20recognition.ipynb)
-5. Improving prediction accuracy
+5. [Improving prediction accuracy](5.%20improving%20accuracy.ipynb)
 6. [Unsupervised learning: Face Clustering](6.%20face%20clustering.ipynb)
 7. [3D Pose Generation from single image](7.%203D%20pose%20generation.ipynb)
-
-TBD
+8. Domain Adversarial Network
 
 ---
 
